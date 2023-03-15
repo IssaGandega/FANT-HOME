@@ -15,6 +15,9 @@ namespace AI.PoltergeistAI
 
         public override NodeState Evaluate()
         {
+            _state = NodeState.FAILURE;
+            return _state;
+            
             _spawnCounter += Time.deltaTime;
             if (_spawnCounter >= _spawnTime)
             {

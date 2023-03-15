@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2811299314925202686}
   - component: {fileID: 7439182158297594648}
   - component: {fileID: 1591897440615013865}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HitSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4924,7 +4924,7 @@ GameObject:
   - component: {fileID: 6945360947341251021}
   - component: {fileID: 6945360947341251020}
   - component: {fileID: 6945360947341251023}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9811,7 +9811,7 @@ GameObject:
   - component: {fileID: 7449831037983499118}
   - component: {fileID: 7449831037983499104}
   - component: {fileID: 7449831037983499105}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14724,7 +14724,7 @@ GameObject:
   - component: {fileID: 7449831038553475339}
   - component: {fileID: 7449831038553475341}
   - component: {fileID: 7449831038553475338}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19610,7 +19610,7 @@ GameObject:
   - component: {fileID: 7449831038553635116}
   - component: {fileID: 7449831038553635118}
   - component: {fileID: 7449831038553635119}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24505,9 +24505,9 @@ GameObject:
   - component: {fileID: 7449831038719637691}
   - component: {fileID: 7449831038719637690}
   - component: {fileID: 7449831038719637693}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: VFX_Gatling
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24519,8 +24519,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7449831038719637692}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.5, y: 0.471, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24609,7 +24609,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -29353,7 +29353,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 2
+  m_RenderAlignment: 4
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 1
@@ -29383,7 +29383,7 @@ GameObject:
   - component: {fileID: 7449831038733492762}
   - component: {fileID: 7449831038733492764}
   - component: {fileID: 7449831038733492765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34269,7 +34269,7 @@ GameObject:
   - component: {fileID: 7449831038776203277}
   - component: {fileID: 7449831038776203279}
   - component: {fileID: 7449831038776203276}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HitFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39156,7 +39156,7 @@ GameObject:
   - component: {fileID: 7449831039313830506}
   - component: {fileID: 7449831039313830508}
   - component: {fileID: 7449831039313830509}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HitSpikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44042,7 +44042,7 @@ GameObject:
   - component: {fileID: 3089005487337844386}
   - component: {fileID: 2617395961728723349}
   - component: {fileID: 3438300147720918190}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HitSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}

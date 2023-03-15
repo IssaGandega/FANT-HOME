@@ -14,7 +14,7 @@ namespace AI.GhostAI
         
         public override NodeState Evaluate()
         {
-            if (_transform.GetComponent<Ghost>().IsStun)
+            if (_transform.GetComponent<Ghost>().IsStun || _transform.GetComponent<Ghost>().IsAttacking)
             {
                 _state = NodeState.RUNNING;
                 return _state;

@@ -14,6 +14,7 @@ public class Ghost : MonoBehaviour, IEnemy
 
     [HideInInspector] public bool IsStun;
     [HideInInspector] public bool IsFleeing;
+    [HideInInspector] public bool IsAttacking;
 
     [Header("Stats in Runtime")] private float _health;
     [HideInInspector] public float Veil;

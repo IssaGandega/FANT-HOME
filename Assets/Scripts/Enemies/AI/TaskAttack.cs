@@ -1,4 +1,5 @@
 ﻿using BehaviorTree;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace AI.GhostAI
@@ -7,14 +8,16 @@ namespace AI.GhostAI
     {
         private Animator _animator;
         private Transform _transform;
-        private Transform _lastTarget;
         private PlayerHealth _playerHealth;
         private int _damage;
         private Vector3 _attackScale;
         private string _attackKey;
         private float _attackDelayBeforeAttack;
+        private float _attackRange;
+        private LayerMask _playerMask;
 
-        public TaskAttack(Transform transform, int damage, Vector3 attackScale, string attackKey, float attackDelayBeforeAttack)
+        public TaskAttack(Transform transform, int damage, Vector3 attackScale, string attackKey,
+            float attackDelayBeforeAttack, float attackRange, LayerMask playerMask)
         {
             _transform = transform;
             _animator = transform.GetComponent<Animator>();
@@ -22,18 +25,15 @@ namespace AI.GhostAI
             _attackScale = attackScale;
             _attackKey = attackKey;
             _attackDelayBeforeAttack = attackDelayBeforeAttack;
+            _attackRange = attackRange;
+            _playerMask = playerMask;
         }
 
         public override NodeState Evaluate()
         {
             Transform target = (Transform)GetData("target");
-            if (target != _lastTarget)
-            {
-                _playerHealth = target.GetComponent<PlayerHealth>();
-                _lastTarget = target;
-            }
 
-            if (_playerHealth.curHealth <= 0)
+            if (target.GetComponent<PlayerHealth>().curHealth <= 0)
             {
                 ClearData("target");
                 // _animator.SetBool("Attacking", false);
@@ -42,9 +42,19 @@ namespace AI.GhostAI
             else
             {
                 _transform.LookAt(target.position);
-                GameObject attackTrash = Pooler.instance.Pop(_attackKey);
-                attackTrash.transform.position = target.position;
-                attackTrash.GetComponent<TrashAttack>().Explode(_transform.position, _attackScale, _damage, _attackDelayBeforeAttack);
+                GameObject attackGhost = Pooler.instance.Pop(_attackKey);
+                _transform.GetComponent<Ghost>().IsAttacking = true;
+                attackGhost.transform.parent = _transform;
+                attackGhost.transform.localPosition = Vector3.zero;
+                attackGhost.transform.localEulerAngles = new Vector3(-90, 90, 0);
+
+                attackGhost.GetComponent<GhostAttack>().Explode(
+                    _transform.position, _attackScale,
+                    target.position - _transform.position,
+                    Quaternion.LookRotation(target.position - _transform.position), _damage, _attackRange,
+                    _attackDelayBeforeAttack,
+                    _transform.GetComponent<Ghost>(), _playerMask);
+
                 _transform.GetComponent<Ghost>().IsFleeing = true;
             }
 

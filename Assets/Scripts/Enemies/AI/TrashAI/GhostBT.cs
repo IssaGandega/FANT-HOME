@@ -10,6 +10,7 @@ namespace AI.GhostAI
     public class GhostBT : Tree
     {
         [SerializeField] private LayerMask _enemiesMask;
+        [SerializeField] private LayerMask _playerMask;
 
         private GhostStatsSO _ghostStatsSO;
 
@@ -23,7 +24,8 @@ namespace AI.GhostAI
                 {
                     new CheckPlayerInAttackRange(transform, _ghostStatsSO.AttackRange, _ghostStatsSO.AttackCD),
                     new TaskAttack(transform, _ghostStatsSO.AttackDamage, _ghostStatsSO.AttackScale,
-                        _ghostStatsSO.AttackKey, _ghostStatsSO.AttackDelayBeforeAttack),
+                        _ghostStatsSO.AttackKey, _ghostStatsSO.AttackDelayBeforeAttack, _ghostStatsSO.AttackRange,
+                        _playerMask),
                 }),
                 new Sequence(new List<Node>
                 {
@@ -34,7 +36,8 @@ namespace AI.GhostAI
                 {
                     new CheckPlayer(transform),
                     new TaskGoToTarget(transform, GetComponent<MeshRenderer>(), _enemiesMask, _ghostStatsSO.MoveSpeed,
-                        _ghostStatsSO.AttackRange, _ghostStatsSO.RangeVisibleToPlayer, _ghostStatsSO.MaxHealth, _ghostStatsSO.MaxVeil),
+                        _ghostStatsSO.AttackRange, _ghostStatsSO.RangeVisibleToPlayer, _ghostStatsSO.MaxHealth,
+                        _ghostStatsSO.MaxVeil),
                 })
             });
 

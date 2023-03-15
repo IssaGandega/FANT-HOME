@@ -12,7 +12,6 @@ namespace AI
         private Transform _transform;
         private Animator _animator;
         private Ghost _ghostComponent;
-        private GameObject[] _playersArray;
         private List<GameObject> _players;
 
         public CheckPlayer(Transform transform)
@@ -50,6 +49,12 @@ namespace AI
                 _ghostComponent.CurRoom = RoomsManager.Instance.rooms[currentIndex];
             }
 
+            if (_players.Count() < 1)
+            {
+                _state = NodeState.FAILURE;
+                return _state;
+            }
+            
             object t = GetData("target");
             if (t == null)
             {
@@ -121,7 +126,7 @@ namespace AI
                         _state = NodeState.SUCCESS;
                         return _state;
                     }
-
+                    
                     var randomPlayer = Random.Range(0, _players.Count);
                     target = playersInSameRoom[randomPlayer].transform;
                     Parent.Parent.SetData("target", target);

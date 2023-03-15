@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Entities
@@ -14,6 +14,7 @@ namespace Entities
         private ShootAction _shootAction;
         
         private GameObject _bullet;
+        private GameObject _particle;
         private Bullet _bulletScript;
         private Vector3 _eulerAngles;
         private float _bulletSpeed;
@@ -39,6 +40,7 @@ namespace Entities
             _bulletDamage = weapon.damage;
             AOE_Range = weapon.AOE_Range;
             _bulletKey = weapon.key.ToString();
+            _particle = weapon.particles;
             if (weapon.flashLight)
             {
                 flashLight.SetEquip(true, weapon.flashLight);
@@ -84,14 +86,30 @@ namespace Entities
         {
             if (!_triggerShoot) return;
             _shootOrder = !_shootOrder;
+            // if (_shootOrder)
+            // {
+            //     Debug.Log(_particle.name);
+            //     _currentParticle = Pooler.instance.Pop(_particle.name);
+            //     _currentParticle.transform.parent = transform;
+            //     _currentParticle.transform.localPosition = Vector3.zero;
+            //     _currentParticle.transform.localPosition += transform.forward;
+            //     
+            //     _currentParticle.transform.rotation = transform.rotation;
+            // }
+            // else
+            // {
+            //     Pooler.instance.Depop(_particle.name, _currentParticle);
+            // }
         }
 
         private void Update()
         {
-            if (!_shootOrder || !(_lastShootTime + _reloadTime < Time.fixedTime)) return;
-            _lastShootTime = Time.fixedTime;
+            if (_shootOrder && _lastShootTime + _reloadTime < Time.fixedTime)
+            {
+                _lastShootTime = Time.fixedTime;
 
-            _shootAction.Invoke();
+                Shoot();
+            }
         }
 
         // ReSharper disable Unity.PerformanceAnalysis

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Unity.Entities;
@@ -35,6 +35,7 @@ public class WeaponsSO: EquipmentSO
     public BulletKeys key;
     public BulletTypes type;
     public FlashLightSO flashLight;
+    public GameObject particles;
 
     [HideInInspector]
     public float AOE_Range;

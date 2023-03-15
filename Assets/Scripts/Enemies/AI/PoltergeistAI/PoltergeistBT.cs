@@ -10,6 +10,7 @@ namespace AI.PoltergeistAI
     public class PoltergeistBT : Tree
     {
         [SerializeField] private LayerMask _enemiesMask;
+        [SerializeField] private LayerMask _playerMask;
 
         private PoltergeistStatsSO _poltergeistStatsSO;
         private Room[] _roomWaypoints;
@@ -38,7 +39,8 @@ namespace AI.PoltergeistAI
                     new CheckPlayerInAttackRange(transform, _poltergeistStatsSO.AttackRange,
                         _poltergeistStatsSO.AttackCD),
                     new TaskAttack(transform, _poltergeistStatsSO.AttackDamage, _poltergeistStatsSO.AttackScale,
-                        _poltergeistStatsSO.AttackKey, _poltergeistStatsSO.AttackDelayBeforeAttack),
+                        _poltergeistStatsSO.AttackKey, _poltergeistStatsSO.AttackDelayBeforeAttack,
+                        _poltergeistStatsSO.AttackRange, _playerMask),
                 }),
                 new Sequence(new List<Node>
                 {

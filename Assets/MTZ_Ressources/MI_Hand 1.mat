@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MI_Hand 1
+  m_Shader: {fileID: -6465566751694194690, guid: f8a58a0f42146c9418ad09ff1838bc19, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_4f7180df5d254981af411a4bc2f543fe_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 2d1df7ca47356134083bab1716f2cca4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d2ea316b89ea447cb9e3ec5fe122d135_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 2d1df7ca47356134083bab1716f2cca4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_f0b00bae116347748ea7a708672054b4_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 9c627070f4c239c4ca57b48aa41eff21, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Fresnel_Power: 0.21
+    - _Gradient_Power: 1.09
+    - _Gradient_Power_1: 7.88
+    - _Mask_Size: 1.25
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Rotation: 5.01
+    - _Speed: 0.2
+    - _Tiling_Difference: 1
+    - _Tiling_Global: 1.25
+    - _Tiling_Stretch: 0.75
+    - _Treshold: 0
+    - _Treshold_1: 0.05
+    - _Treshold_Width: 1
+    - _global_power: 1
+    - _intensity: 0.938
+    m_Colors:
+    - _Color: {r: 4.181924, g: 0.11846835, b: 22.62741, a: 0}
+    - _Color_1: {r: 0.063802905, g: 0, b: 7.464264, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &5307001364106309190
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MI_Poltergeist
+  m_Shader: {fileID: -6465566751694194690, guid: fffdc8ce37b24fe40926960ed230be80, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DisplacementMask:
+        m_Texture: {fileID: 2800000, guid: 925096fa55cc4774f8970339315dda3d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2DLOD_56a87251fa984917bd84c2de26128db5_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 16db7fd06ff2537448dde43143b68ceb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2DLOD_7cd80ab1d0ac4a2f99b1c099e1877888_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 503f2e29c002085459c06103a42053e8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0b3c1761f3fa4ace8826c6083e16ce1b_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 16ed0138fb1501842b5288f8f0931148, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_60837db1cec84ece86eaa1565bb8ec98_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 16db7fd06ff2537448dde43143b68ceb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_6ca5fee7cd554572987eb74fd0360fcc_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 6ecb6d71994a5214283569e5f51d06ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_70c203e5597848cda6d6b4670a286110_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_8a03b467bba74fb895431b39e937b2e6_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 6ecb6d71994a5214283569e5f51d06ad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Displacement_Frequency: 5
+    - _Displacement_Frequency_1: 3
+    - _Displacement_Frequency_2: 6
+    - _Displacement_Frequency_3: 60
+    - _Displacement_Frequency_4: 4
+    - _Displacement_Intensity: 0.2
+    - _Displacement_Intensity_1: 0.075
+    - _Displacement_Intensity_2: 0.001
+    - _Displacement_Intensity_3: 0.1
+    - _Displacement_Intensity_4: 0.03
+    - _Displacement_Mask_Power: 3
+    - _Displacement_Mask_Power_1: 6
+    - _FadeBorder: 0.3
+    - _FadeIntensity: 0.02
+    - _FadePower: 4
+    - _HIT: 0
+    - _Hit_Flicker_Frequency: 40
+    - _Hit_Flicker_Transition_Power: 0.2
+    - _Opacity: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Tail_Intensity: 0.125
+    - _WIND_UP: 0
+    - _Wind_Up_Displacement: 0.5
+    m_Colors:
+    - _Color: {r: 0, g: 1.0237021, b: 60.58241, a: 0}
+    - _ColorEyes: {r: 0.003921569, g: 0.003921569, b: 0.015686275, a: 0}
+    - _ColorEyes_Atk: {r: 14.247049, g: 0.76083016, b: 194.0117, a: 1}
+    - _Color_Background: {r: 0.04846031, g: 0.0632105, b: 0.103773594, a: 0}
+    - _Displacement_Axis_Intensity: {r: 1, g: 0.5, b: 0.25, a: 0}
+    - _Displacement_Axis_Intensity_1: {r: 0, g: 0.5, b: 1, a: 0}
+    - _Displacement_Axis_Intensity_2: {r: 1, g: 0.5, b: 0.75, a: 0}
+    - _Displacement_Axis_Intensity_3: {r: 1, g: 0.2, b: 1, a: 0}
+    - _Displacement_Axis_Intensity_4: {r: 1, g: 2, b: 1, a: 0}
+    - _HitColor: {r: 21.099447, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &1915361927202244139
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

@@ -4893,7 +4893,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8b81022e9bb4ab24d984af5e4cf80955, type: 2}
+  - {fileID: 2100000, guid: d982694c73318294da766ecf841e15e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4933,6 +4933,7 @@ MonoBehaviour:
   _stunObject: {fileID: 4060155084722820505}
   IsStun: 0
   IsFleeing: 0
+  IsAttacking: 0
   Veil: 1
 --- !u!114 &3969293103871739000
 MonoBehaviour:
@@ -4949,6 +4950,9 @@ MonoBehaviour:
   _enemiesMask:
     serializedVersion: 2
     m_Bits: 128
+  _playerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!65 &7588961759950954742
 BoxCollider:
   m_ObjectHideFlags: 0

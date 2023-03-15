@@ -36,6 +36,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _DisplacementMask:
+        m_Texture: {fileID: 2800000, guid: 0d7e146045422e24ea0bdf4f5c6383bf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 689c9b561cc907f468477bd5ef0e2851, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_828bfd3f722b48f4ba5405db2416f522_Texture_1:
         m_Texture: {fileID: 2800000, guid: 04ffbd6ce5f8b6b4a8697bac4a9c639a, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -64,6 +72,7 @@ Material:
     - _Displacement_Intensity_2: 0.005
     - _Displacement_Intensity_3: 0.01
     - _Displacement_Intensity_4: 0.2
+    - _Fade_Power: 4.4
     - _Flicker_Frequency: 30
     - _Flicker_Transition_Power: 0.2
     - _HIT: 0
@@ -71,10 +80,18 @@ Material:
     - _Hit_Flicker_Transition_Power: 0.2
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Roughness: 1
+    - _Speed: 1
+    - _WheelLeft: 0
+    - _WheelLeftBackward: 1
+    - _WheelLeftForward: 0
+    - _WheelRight: 0
+    - _WheelRightBackward: 0
+    - _WheelRightForward: 1
     m_Colors:
     - _Color: {r: 0.84089637, g: 0, b: 0, a: 0}
-    - _Displacement_Axis_Intensity: {r: 3, g: 5, b: 1, a: 0}
-    - _Displacement_Axis_Intensity_1: {r: 0.5, g: 0, b: 1.5, a: 0}
+    - _Displacement_Axis_Intensity: {r: 4, g: 3, b: 0.5, a: 0}
+    - _Displacement_Axis_Intensity_1: {r: 0.5, g: 0, b: 1, a: 0}
     - _Displacement_Axis_Intensity_2: {r: 1, g: 1, b: 1, a: 0}
     - _Displacement_Axis_Intensity_3: {r: 1, g: 0, b: 1, a: 0}
     - _Displacement_Axis_Intensity_4: {r: 1, g: 0.2, b: 1, a: 0}
