@@ -47,7 +47,7 @@ namespace AI.PoltergeistAI
                     new CheckInteractable(transform, _poltergeistStatsSO.InteractionCD,
                         _poltergeistStatsSO.InteractionRange),
                     new TaskInteractable(transform, _poltergeistStatsSO.MoveSpeed,
-                        _poltergeistStatsSO.CanActivateObject)
+                        _poltergeistStatsSO.CanActivateObject, _poltergeistStatsSO.InteractableKey)
                 }),
                 new Sequence(new List<Node>
                 {

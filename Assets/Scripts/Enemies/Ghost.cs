@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Scriptables;
 using Unity.Collections;
@@ -11,6 +12,8 @@ public class Ghost : MonoBehaviour, IEnemy
     [Header("Stats")] public GhostStatsSO _ghostSO;
     [SerializeField] private string _name = "Ghost";
     [SerializeField] private GameObject _stunObject;
+    [SerializeField] private GameObject _veilLossObject;
+    [SerializeField] private GameObject _hitLightGameObject;
 
     [HideInInspector] public bool IsStun;
     [HideInInspector] public bool IsFleeing;
@@ -30,10 +33,10 @@ public class Ghost : MonoBehaviour, IEnemy
     private float _stunCounter;
     private float _veilCounter;
 
-    private Color _colorVeil;
     private Color _colorHealth;
 
     private Coroutine _regenCO;
+    private static readonly int Opacity = Shader.PropertyToID("_Opacity");
 
     private void OnEnable()
     {
@@ -46,7 +49,12 @@ public class Ghost : MonoBehaviour, IEnemy
         _stunTime = _ghostSO.StunDuration;
         _meshRenderer = GetComponent<MeshRenderer>();
         _meshRenderer.enabled = false;
-        _colorVeil = _meshRenderer.material.color;
+        
+    }
+
+    private void Start()
+    {
+        GameManager.instance.inGameUiManager.UpdateEnemiesRemaining(true);
     }
 
     private void Update()
@@ -64,6 +72,7 @@ public class Ghost : MonoBehaviour, IEnemy
         if (!_isVulnerable) return;
         _veilCounter += Time.deltaTime;
         if (!(_veilCounter >= _regenVeilCD)) return;
+        _hitLightGameObject.SetActive(false);
         _regenCO = StartCoroutine(RegenVeil());
     }
 
@@ -82,22 +91,23 @@ public class Ghost : MonoBehaviour, IEnemy
 
     public void TakeVeil(float damageVeil)
     {
-        if (Veil > 0 && Veil-damageVeil <= 0)
+        if (Veil > 0 && Veil - damageVeil <= 0)
         {
             AudioManager.Instance.PlaySFXRandom("Ghost_Revealed", 0.8f, 1.2f);
         }
 
         Veil -= damageVeil;
+        _hitLightGameObject.SetActive(true);
         if (Veil < _ghostSO.MaxHealth) _meshRenderer.enabled = true;
         if (Veil <= 0)
         {
             Veil = 0;
             _isVulnerable = true;
+            _veilLossObject.SetActive(true);
         }
 
         var alpha = 1 - (Veil / _ghostSO.MaxVeil);
-        _colorVeil.a = alpha;
-        _meshRenderer.material.color = _colorVeil;
+        _meshRenderer.material.SetFloat(Opacity, alpha);
         if (!_isVulnerable) return;
         if (_ghostSO.AlwaysStun)
         {
@@ -121,13 +131,15 @@ public class Ghost : MonoBehaviour, IEnemy
 
     public void TakeDamage(float damage)
     {
-        if (_health > 0 && _health-damage <= 0)
+        if (_health > 0 && _health - damage <= 0)
         {
             AudioManager.Instance.PlaySFXRandom(_ghostSO.Death_SFX, 0.8f, 1.2f);
-        } else if (_health-damage > 0)
+        }
+        else if (_health - damage > 0)
         {
             AudioManager.Instance.PlaySFXRandom(_ghostSO.Damage_SFX, 0.8f, 1.2f);
         }
+
         if (!_isVulnerable) return;
         _health -= damage;
         _colorHealth = Color.Lerp(Color.red, Color.green, _health / _ghostSO.MaxHealth);
@@ -135,9 +147,11 @@ public class Ghost : MonoBehaviour, IEnemy
         _meshRenderer.material.color = _colorHealth;
         if (_health <= 0)
         {
+            GameManager.instance.inGameUiManager.UpdateEnemiesRemaining(false);
             _health = 0;
+            GameObject ghostDeath = Pooler.instance.Pop(_ghostSO.DeathKey);
+            ghostDeath.transform.position = transform.position + Vector3.up;
             Pooler.instance.Depop(_ghostSO.Key.ToString(), gameObject);
-            return;
         }
     }
 
@@ -147,18 +161,17 @@ public class Ghost : MonoBehaviour, IEnemy
         while (Veil <= _ghostSO.MaxVeil)
         {
             Veil += _regenVeilPoints;
+            _veilLossObject.SetActive(false);
             _isVulnerable = false;
             IsFleeing = false;
             _canBeStun = false;
             alpha = 1 - (Veil / _ghostSO.MaxVeil);
-            _colorVeil.a = alpha;
-            _meshRenderer.material.color = _colorVeil;
+            _meshRenderer.material.SetFloat(Opacity, alpha);
             yield return new WaitForSeconds(_regenVeilOverTime);
         }
 
         alpha = 1 - (Veil / _ghostSO.MaxVeil);
-        _colorVeil.a = alpha;
-        _meshRenderer.material.color = _colorVeil;
+        _meshRenderer.material.SetFloat(Opacity, alpha);
         if (Veil >= _ghostSO.MaxHealth) _meshRenderer.enabled = false;
     }
 }

@@ -12,4 +12,5 @@ public enum EquipmentType
 public abstract class EquipmentSO : ScriptableObject
 {
     public EquipmentType equipType;
+    public Sprite icon;
 }

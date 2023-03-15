@@ -14,7 +14,7 @@ public class FlashLight : MonoBehaviour
     public bool gunHaveLight;
     
     [SerializeField] private GameObject flashLightGO;
-    [SerializeField] private bool isActive;
+    public bool isActive;
     [SerializeField] private LayerMask obstaclesMask, enemiesMask;
 
     private Coroutine curLoop;

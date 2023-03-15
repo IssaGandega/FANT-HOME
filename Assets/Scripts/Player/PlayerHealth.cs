@@ -14,10 +14,11 @@ public class PlayerHealth : MonoBehaviour, IHitable
     [SerializeField] private PlayerState curState;
 
     [SerializeField] private GameObject deathInteractionGO;
-
+    [SerializeField] private Player player;
     private void Awake()
     {
         curState = PlayerState.BASE;
+        if (!player) player = GetComponent<Player>();
     }
     
     [ContextMenu("TakeHits")]
@@ -31,6 +32,7 @@ public class PlayerHealth : MonoBehaviour, IHitable
         if (curState == PlayerState.INVINCIBLE || curHealth <= 0) return;
 
         curHealth -= damage;
+        player.playerUI.UpdateHealthUI(curHealth);
         Debug.Log("got hit");
         if (curHealth <= 0) Fall();
         else StartCoroutine(Invincible());

@@ -288,7 +288,7 @@ Transform:
   - {fileID: 8260292746833327038}
   - {fileID: 201022445910330054}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8849368044936227798
 MonoBehaviour:
@@ -384,7 +384,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 66975faa1f585674f890e2fb3f06eb14, type: 3}
   - name: Ghost_PG_Damage
     level: 0.2
-    clip: {fileID: 8300000, guid: 39732be671605fc44b7c807d0c668af7, type: 3}
+    clip: {fileID: 8300000, guid: 1bab3d93e6340ae449be5fc99c938ef8, type: 3}
   - name: Ghost_PG_Death
     level: 0.5
     clip: {fileID: 8300000, guid: 6bbe1223b2abf7241a9b3a8f3d6e5a4d, type: 3}
@@ -427,5 +427,8 @@ MonoBehaviour:
   - name: Haunted_Clock
     level: 0.5
     clip: {fileID: 8300000, guid: f4e62d1acd13a4748a2145441f86b259, type: 3}
+  - name: Shelf_Boom
+    level: 0.5
+    clip: {fileID: 8300000, guid: 7d3bd895a2db5c844a2d110f61565892, type: 3}
   musicSource: {fileID: 8938484287315418197}
   sfxSource: {fileID: 7965921723786968057}

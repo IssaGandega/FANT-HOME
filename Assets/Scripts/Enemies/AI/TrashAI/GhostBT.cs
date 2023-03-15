@@ -30,7 +30,7 @@ namespace AI.GhostAI
                 new Sequence(new List<Node>
                 {
                     new CheckInteractable(transform, _ghostStatsSO.InteractionCD, _ghostStatsSO.InteractionRange),
-                    new TaskInteractable(transform, _ghostStatsSO.MoveSpeed, _ghostStatsSO.CanActivateObject)
+                    new TaskInteractable(transform, _ghostStatsSO.MoveSpeed, _ghostStatsSO.CanActivateObject, _ghostStatsSO.InteractableKey)
                 }),
                 new Sequence(new List<Node>
                 {

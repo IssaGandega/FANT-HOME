@@ -45,15 +45,13 @@ namespace AI.GhostAI
                 GameObject attackGhost = Pooler.instance.Pop(_attackKey);
                 _transform.GetComponent<Ghost>().IsAttacking = true;
                 attackGhost.transform.parent = _transform;
-                attackGhost.transform.localPosition = Vector3.zero;
-                attackGhost.transform.localEulerAngles = new Vector3(-90, 90, 0);
+                attackGhost.transform.localPosition = new Vector3(0, 0, 1);
+                if (_attackKey.Contains("Poltergeist")) attackGhost.transform.localEulerAngles = new Vector3(-90, 90, 0);
+                else if (_attackKey.Contains("Ghost")) attackGhost.transform.localEulerAngles = new Vector3(-180, 180, 0);
 
-                attackGhost.GetComponent<GhostAttack>().Explode(
-                    _transform.position, _attackScale,
-                    target.position - _transform.position,
-                    Quaternion.LookRotation(target.position - _transform.position), _damage, _attackRange,
-                    _attackDelayBeforeAttack,
-                    _transform.GetComponent<Ghost>(), _playerMask);
+                attackGhost.GetComponent<GhostAttack>().Explode(_transform.position, _attackScale,
+                    target.position - _transform.position, _damage, _attackRange, _attackDelayBeforeAttack,
+                    _transform.GetComponent<Ghost>(), _playerMask, _attackKey);
 
                 _transform.GetComponent<Ghost>().IsFleeing = true;
             }

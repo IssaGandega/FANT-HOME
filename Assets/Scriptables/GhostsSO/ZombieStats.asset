@@ -17,17 +17,21 @@ MonoBehaviour:
   VeilRegenPoints: 0
   VeilRegenCD: 2.5
   VeilRegenOverTime: 0
+  RangeVisibleToPlayer: 0
   MoveSpeed: 2.5
   StunDuration: 1.5
   AlwaysStun: 1
   AttackDamage: 1
   AttackRange: 3
-  AttackRadius: 1
+  AttackScale: {x: 0, y: 0, z: 0}
   AttackCD: 3.5
   AttackDelayBeforeAttack: 1.5
+  CanActivateObject: 0
   InteractionRange: 6
   InteractionCD: 6
   AttackKey: TrashAttack
+  DeathKey: VFX_GhostDeath
+  InteractableKey: 
   Key: 2
   Attack_SFX: Ghost_Trash_Attack
   Connect_SFX: Ghost_Trash_Attack_Connect

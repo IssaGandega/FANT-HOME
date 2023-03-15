@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurRoom: {fileID: 0}
   _ghostSO: {fileID: 11400000, guid: 36771088f896b2b4885db6162935fdf5, type: 2}
-  _name: Zombie
+  _name: Ectoplasma
   _stunObject: {fileID: 6643732333078870216}
   IsStun: 0
   IsFleeing: 0

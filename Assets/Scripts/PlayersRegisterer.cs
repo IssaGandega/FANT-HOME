@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
 public class PlayersRegisterer : MonoBehaviour
@@ -13,6 +14,8 @@ public class PlayersRegisterer : MonoBehaviour
     
     [SerializeField] private Button LaunchButton;
     [SerializeField] private TMP_Text playersNumDisp;
+    [SerializeField] private GameObject firstSelected;
+    [SerializeField] private GameObject canvas;
 
     private void Start()
     {
@@ -23,6 +26,8 @@ public class PlayersRegisterer : MonoBehaviour
     {
         Debug.Log("Join");
         if (PlayersManager.instance.GetPlayerCount >= playersMaxNumber) return;
+        player.transform.GetChild(0).GetComponent<MultiplayerEventSystem>().playerRoot = canvas;
+        player.transform.GetChild(0).GetComponent<MultiplayerEventSystem>().firstSelectedGameObject = firstSelected;
         PlayersManager.instance.PlayerJoin(player);
         
         int playCount = PlayersManager.instance.GetPlayerCount;

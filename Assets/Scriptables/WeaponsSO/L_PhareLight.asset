@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: L_PhareLight
   m_EditorClassIdentifier: 
   equipType: 1
+  icon: {fileID: 21300000, guid: af78e49ce94c7184685d0f8564c3db61, type: 3}
   shape: 0
   angle: 0
   width: 3

@@ -14,9 +14,11 @@ public class WaveTool : MonoBehaviour
 
     public int index = 0;
     private float timer;
+    private TimerUI timerUI;
 
     private void Start()
     {
+        timerUI = GameManager.instance.inGameUiManager.timerUI;
         index = 0;
         if (waves.Length == 0) return;
         SpawnWave(waves[index]);
@@ -50,7 +52,14 @@ public class WaveTool : MonoBehaviour
 
     private IEnumerator WaveDuration(float t)
     {
-        yield return new WaitForSeconds(t);
+        float timer = t;
+        float maxTime = t;
+        while (timer>=0)
+        {
+            yield return new WaitForEndOfFrame();
+            timer -= Time.deltaTime;
+            timerUI.UpdateSliderValue(timer/t);
+        }
         GoToNextWave();
     }
 }

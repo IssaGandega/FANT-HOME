@@ -30,6 +30,8 @@ namespace Scriptables
         public int InteractionRange;
         public int InteractionCD;
         public string AttackKey;
+        public string DeathKey;
+        public string InteractableKey;
         public MonsterType Key;
         public string Attack_SFX, Connect_SFX, Damage_SFX, Death_SFX;
     }   

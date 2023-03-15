@@ -87,6 +87,7 @@ MonoBehaviour:
   roomsManager: {fileID: 1760945989499659823}
   playerManager: {fileID: 792267964056597756}
   messageDisplayer: {fileID: 3825712722076971893}
+  inGameUiManager: {fileID: 8425348272860678064}
 --- !u!1 &4660405781704207386
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +605,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 253776499c4acfd44bec82a4d04fee5e, type: 3}
+--- !u!114 &160987895562745133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5972607646731611089, guid: 253776499c4acfd44bec82a4d04fee5e, type: 3}
+  m_PrefabInstance: {fileID: 5825694885669215996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df81b8be1b1f1b546bdc67becca5ea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3825712722076971893 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7335994161424280969, guid: 253776499c4acfd44bec82a4d04fee5e, type: 3}
@@ -615,11 +627,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce081258ef17ba840ab84d1187ae1846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3994253289089982850 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7473572492208734078, guid: 253776499c4acfd44bec82a4d04fee5e, type: 3}
+  m_PrefabInstance: {fileID: 5825694885669215996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df81b8be1b1f1b546bdc67becca5ea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4299591326977707058 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7742304765555823310, guid: 253776499c4acfd44bec82a4d04fee5e, type: 3}
   m_PrefabInstance: {fileID: 5825694885669215996}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5645538533276960041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2198317109507742677, guid: 253776499c4acfd44bec82a4d04fee5e, type: 3}
+  m_PrefabInstance: {fileID: 5825694885669215996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df81b8be1b1f1b546bdc67becca5ea7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8425348272860678064 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2609237010452339020, guid: 253776499c4acfd44bec82a4d04fee5e, type: 3}
+  m_PrefabInstance: {fileID: 5825694885669215996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a9e9be804fd6bf4e81ec1ea13ccbbf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6235849555688548091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -831,6 +876,30 @@ PrefabInstance:
       propertyPath: targetGroup
       value: 
       objectReference: {fileID: 792267964831976177}
+    - target: {fileID: 8995904436073657507, guid: 6a0a3bb55877d384f931b5e122a203c0, type: 3}
+      propertyPath: playersUI.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995904436073657507, guid: 6a0a3bb55877d384f931b5e122a203c0, type: 3}
+      propertyPath: colors.Array.data[0].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995904436073657507, guid: 6a0a3bb55877d384f931b5e122a203c0, type: 3}
+      propertyPath: colors.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995904436073657507, guid: 6a0a3bb55877d384f931b5e122a203c0, type: 3}
+      propertyPath: playersUI.Array.data[0]
+      value: 
+      objectReference: {fileID: 160987895562745133}
+    - target: {fileID: 8995904436073657507, guid: 6a0a3bb55877d384f931b5e122a203c0, type: 3}
+      propertyPath: playersUI.Array.data[1]
+      value: 
+      objectReference: {fileID: 5645538533276960041}
+    - target: {fileID: 8995904436073657507, guid: 6a0a3bb55877d384f931b5e122a203c0, type: 3}
+      propertyPath: playersUI.Array.data[2]
+      value: 
+      objectReference: {fileID: 3994253289089982850}
     - target: {fileID: 8995904436205936280, guid: 6a0a3bb55877d384f931b5e122a203c0, type: 3}
       propertyPath: m_Icon
       value: 

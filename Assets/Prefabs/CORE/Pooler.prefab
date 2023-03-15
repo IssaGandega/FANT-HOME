@@ -123,3 +123,45 @@ MonoBehaviour:
       baseCount: 50
       baseRefreshSpeed: 5
       refreshSpeed: 5
+  - key: VFX_PoltergeistAtk
+    pool:
+      prefab: {fileID: 6690813088856074196, guid: 16d21527c36e4c34d8c9a69e67b897da, type: 3}
+      baseCount: 10
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: VFX_PoltergeistDeath
+    pool:
+      prefab: {fileID: 8201916849986279865, guid: 45cd755819fc3c342b04a6f0838dc96c, type: 3}
+      baseCount: 10
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: VFX_GhostAtk
+    pool:
+      prefab: {fileID: 4442875904893360420, guid: 87d3f4cd815769c4fb00195d8585ffd5, type: 3}
+      baseCount: 50
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: VFX_GhostDeath
+    pool:
+      prefab: {fileID: 5214454431363827078, guid: 16d6b3f4023059940812c939ea44e22e, type: 3}
+      baseCount: 50
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: VFX_Interactable
+    pool:
+      prefab: {fileID: 7865139597352801080, guid: 453bc7188c8a4594d89969e519e927fb, type: 3}
+      baseCount: 50
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: VFX_HitLight
+    pool:
+      prefab: {fileID: 7400902286867068484, guid: 7800f69b40b36ba4ba3025b0d983741c, type: 3}
+      baseCount: 50
+      baseRefreshSpeed: 5
+      refreshSpeed: 5
+  - key: VFX_PlayerGhostProximity
+    pool:
+      prefab: {fileID: 43484051788488687, guid: db1a1ded3bb94ec459a48f9cb6d89174, type: 3}
+      baseCount: 5
+      baseRefreshSpeed: 5
+      refreshSpeed: 5

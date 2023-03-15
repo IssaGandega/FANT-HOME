@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: L_FlashLight
   m_EditorClassIdentifier: 
   equipType: 1
+  icon: {fileID: 21300000, guid: 1405d8a7c96443a4cb56d8f412d796b2, type: 3}
   shape: 1
   angle: 60
   width: 0.84

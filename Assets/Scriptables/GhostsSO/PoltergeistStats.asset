@@ -30,6 +30,8 @@ MonoBehaviour:
   InteractionRange: 6
   InteractionCD: 6
   AttackKey: VFX_PoltergeistAtk
+  DeathKey: VFX_PoltergeistDeath
+  InteractableKey: VFX_Interactable
   Key: 0
   Attack_SFX: Ghost_PG_Attack
   Connect_SFX: Ghost_PG_Attack_Connect

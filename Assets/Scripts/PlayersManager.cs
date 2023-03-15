@@ -29,8 +29,8 @@ public class PlayersManager : MonoBehaviour
         
         devices.Add(playerInput.devices[0]);
         
-        playerInput.transform.SetParent(gameObject.transform);
-        Destroy(playerInput.gameObject);
+        //playerInput.transform.SetParent(gameObject.transform);
+        //Destroy(playerInput.gameObject);
     }
 
     public void TransferPlayerInput(GameObject[] playersGO)
