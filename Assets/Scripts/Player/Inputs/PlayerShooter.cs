@@ -174,7 +174,7 @@ namespace Entities
         private void ShootExplosive()
         {
             _eulerAngles = transform.eulerAngles;
-            AudioManager.Instance.PlaySFXRandom("GunShot", 0.8f, 1.2f);
+            AudioManager.Instance.PlaySFXRandom("BigBertha_Shoot", 0.8f, 1.2f);
             SetBullet();
             _bulletScript.SetExplosive();
         }
@@ -182,7 +182,8 @@ namespace Entities
         private void ShootMultiple()
         {
             float totalAngle = weapon.bulletNumber %2 == 0 ? 30 : 45;
-            AudioManager.Instance.PlaySFXRandom("GunShot", 0.8f, 1.2f);
+            
+            AudioManager.Instance.PlaySFXRandom("TV_WhiteNoise", 0.8f, 1.2f);
             
             for (int i = 0; i < weapon.bulletNumber; i++)
             {

@@ -29,9 +29,9 @@ public class WaveTool : MonoBehaviour
     private void GoToNextWave()
     {
         index++;
-        if (index is 3 or 5 or 7)
+        if (index is 2 or 4 or 6)
         {
-            AudioManager.Instance.Fade(true, 0, 2);
+            AudioManager.Instance.PlayNextMusic();
         }
 
         if (index > waves.Length - 1)

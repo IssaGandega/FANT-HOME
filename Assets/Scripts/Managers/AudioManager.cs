@@ -86,11 +86,10 @@ public class AudioManager : MonoBehaviour
         if (index >= musicSounds.Length - 1) return;
         _delayTime = musicSounds[index].clip.length - musicSource.time;
         //Debug.Log(_delayTime*1000);
-        await Task.Delay((int)_delayTime * 1000);
+        await Task.Delay((int)_delayTime*1000);
         musicSource.Stop();
         index++;
         PlayMusic(musicSounds[index].name);
-        Fade(false, 1, 2);
     }
     
     public IEnumerator Fade(bool isSkip, int targetVolume, float duration)
