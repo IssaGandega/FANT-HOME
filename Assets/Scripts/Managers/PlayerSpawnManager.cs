@@ -40,7 +40,6 @@ public class PlayerSpawnManager : MonoBehaviour
             meshRenderer.material.SetColor(PlayerColor, colors[playerInput.playerIndex]);
         }
 
-        playerInput.gameObject.GetComponent<Player>().CanvasPlayer.transform.LookAt(Camera.main.transform);
         playerInput.gameObject.GetComponent<Player>().NumPlayer.text = "P" + (playerInput.playerIndex + 1);
         playerInput.gameObject.GetComponent<Player>().NumPlayer.color = colors[playerInput.playerIndex];
         playerInput.gameObject.GetComponent<Player>().Arrow.color = colors[playerInput.playerIndex];

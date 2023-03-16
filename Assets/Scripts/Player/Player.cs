@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
             return;
         }
         _proximityGhostObject.SetActive(true);
+        
+        CanvasPlayer.transform.LookAt(Camera.main.transform);
     }
 
     private void OnDrawGizmos()
